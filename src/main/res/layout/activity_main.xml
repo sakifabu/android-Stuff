@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sakif.collegenetworkappabu.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight = "1"
+        android:orientation="horizontal"
+        android:id="@+id/Banner">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
+            android:id="@+id/imageView1"
+            android:src="@drawable/school"
+            android:scaleType="fitXY"
+            android:onClick="onPicClick"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/infoLayout"
+        android:background="@color/colorPrimaryDark">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
+            android:layout_weight = "1"
+            android:id="@+id/linearInfoLayout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:id="@+id/titleMain"
+                android:textColor="@color/colorAccent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textMain"
+                android:textColor="@color/colorAccent"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/Banner"
+        android:id="@+id/Nav"
+        android:layout_weight = "1"
+        android:layout_margin="0dp"
+
+        >
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnNetworks"
+            android:text="Networks"
+            android:textSize="15sp"
+            android:onClick="onClickNetworks"
+            android:layout_marginLeft="3dp"
+
+            android:padding="5dp"
+
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnFriends"
+            android:text="Friends"
+            android:textSize="15sp"
+            android:onClick="onClickFriends"
+            android:layout_margin="0dp"
+            android:padding="5dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnActivities"
+            android:text="Activities"
+            android:textSize="15sp"
+            android:onClick="onClickActivities"
+            android:layout_margin="0dp"
+            android:padding="5dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnProfile"
+            android:text="Profile"
+            android:textSize="15sp"
+            android:onClick="onClickProfile"
+            android:layout_margin="0dp"
+            android:padding="5dp"
+            />
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Nav"
+
+        android:id = "@+id/calFrame">
+
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:id="@+id/calendarView">
+
+        </CalendarView>
+
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id = "@+id/gridFrameNetworks"
+
+        android:layout_below="@+id/Nav"
+        android:visibility="gone">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollViewNetworks"
+            >
+
+
+        </ScrollView>
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridViewNetworks"
+            android:numColumns="1">
+
+        </GridView>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridFrameFriends"
+        android:layout_below="@+id/Nav"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ScrollViewFriends"
+
+            >
+
+        </ScrollView>
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridViewFriends"
+            android:numColumns="1">
+
+        </GridView>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridFrameActivities"
+        android:visibility="gone"
+        android:layout_below="@id/Nav">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollViewActivities"
+            >
+
+        </ScrollView>
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridViewActivities"
+            android:numColumns="1">
+
+        </GridView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridFrameProfile"
+        android:layout_below="@id/Nav"
+        android:visibility="gone">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "NAME"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "PASSWORD"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "E-MAIL:"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "PHONE:"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
